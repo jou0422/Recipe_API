@@ -1,12 +1,3 @@
-const cors = require('cors');
-
-// 開放來源
-app.use(cors({
-  origin: ['https://jou0422.github.io'], // 可以支援多個來源
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  credentials: true
-}));
-
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
@@ -20,6 +11,15 @@ var loginRouter = require('./routes/login');
 
 
 var app = express();
+const cors = require('cors');
+
+
+// 開放來源
+app.use(cors({
+  origin: ['https://jou0422.github.io'], // 可以支援多個來源
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true
+}));
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
