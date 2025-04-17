@@ -1,8 +1,3 @@
-const cors = require('cors');
-
-// 開放所有來源
-app.use(cors());
-
 var express = require('express');
 var router = express.Router();
 
